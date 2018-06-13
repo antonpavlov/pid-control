@@ -1,0 +1,37 @@
+called: /usr/bin/g++
+	/home/anton/Developer/Projects/pid-control/pid-control
+	/usr/bin/g++
+	-I/usr/local/include
+	-Wall
+	-std=c++11
+	-o
+	CMakeFiles/pid.dir/src/PID.cpp.o
+	-c
+	/home/anton/Developer/Projects/pid-control/pid-control/src/PID.cpp
+
+called: /usr/bin/g++
+	/home/anton/Developer/Projects/pid-control/pid-control
+	/usr/bin/g++
+	-I/usr/local/include
+	-Wall
+	-std=c++11
+	-o
+	CMakeFiles/pid.dir/src/main.cpp.o
+	-c
+	/home/anton/Developer/Projects/pid-control/pid-control/src/main.cpp
+
+called: /usr/bin/g++
+	/home/anton/Developer/Projects/pid-control/pid-control
+	/usr/bin/g++
+	-Wall
+	CMakeFiles/pid.dir/src/PID.cpp.o
+	CMakeFiles/pid.dir/src/main.cpp.o
+	-o
+	pid
+	-L/usr/local/lib
+	-Wl,-rpath,/usr/local/lib
+	-lz
+	-lssl
+	-luv
+	-luWS
+
