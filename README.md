@@ -13,7 +13,9 @@ Coefficients for the proportional, integral and derivative terms were obtained b
 - Ki = 0.0
 - Kd = 3.0
 
-In a short description, Kp determines a speed of the systems response; Ki acting over residual error; and Kd or an "anticipatory control" dumps an oscillation and defines the best estimate for a set state / current state ratio.
+In a short description, the proportional coefficient (Kp) determines a speed of the system's response to error; the integral coefficient (Ki) acting over residual error by compensating a bias; and differential coefficient (Kd) or an "anticipatory control", dumps an oscillation and defines the best estimate for a set-state / current-state ratio.
+
+A short video that shows effects of each PID component over a whole system, can be seen [here](https://youtu.be/CfiO3-dxoIk).
 
 ## Requirements ##
 In order to successfully build and run the program, the following requirements should be fulfilled:
