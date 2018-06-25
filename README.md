@@ -2,10 +2,19 @@
 An implementation of a PID controller in C++ to maneuver the vehicle around a simulated track - Udacity's Self-Driving Car Nanodegree.
 
 ## Description ##
-Originally provided by Udacity
-This repository contains a PID controller that has, as an input, a cross track error (CTE) and the velocity (mph) of a simulated veicle and, as an output, an appropriate steering angle for a car stay in a track.
+This repository contains a PID controller that has, as an input, a cross track error (CTE) of a simulated veicle and, as an output, an appropriate steering angle for a car stay in a track. The steering angle or gain is described by the following equation:
 
-Initial repository can be found [here](https://github.com/udacity/CarND-PID-Control-Project).
+``
+gain = -(Kp * cte + Ki * (i_error + cte) + Kd * (cte - prev_cte)
+``
+
+Coefficients for the proportional, integral and derivative terms were obtained by trial-and-error basis taking in account vehicle's speed. They are the following:
+- Kp = 0.23
+- Ki = 0.0
+- Kd = 3.0
+
+In a short description, Kp determines a speed of the systems response; Ki acting over residual error; and Kd or an "anticipatory control" dumps an oscillation and defines the best estimate for a set state / current state ratio.
+
 ## Requirements ##
 In order to successfully build and run the program, the following requirements should be fulfilled:
 * `cmake` equal or above version 3.5
@@ -15,9 +24,11 @@ In order to successfully build and run the program, the following requirements s
 
 The contents of this repo were tested in Ubuntu Linux 18.04. It should work fine in Mac OS X once requirements are fulfilled. For Windows, please use Docker or other virtualization tools.
 
+Initial repository can be found [here](https://github.com/udacity/CarND-PID-Control-Project).
+
 ## Building and Running the code ##
 In order to compile, please execute the following commands in a project folder:
-1. `cmake ./` - do it once; in case of any machine or folder path changes, you may want to delete `CMakeChache.txt`.
+1. `cmake ./` - do it once; in case of any folder changes, you may want to delete `CMakeChache.txt`.
 3. `make`
 
 In order to execute the program:
@@ -31,4 +42,4 @@ Once compiled and launched, the program tries establish a connection with a simu
 The simulator can be downloaded [here](https://github.com/udacity/self-driving-car-sim/releases).
 
 ## License ##
-All software included in this repository is licensed under MIT license terms. All additional programs and libraries have their owners and are distributed under their respective licenses. This repository contains Udacity's intellectual property. For any inquires on its reuse or commercialization, please contact Udacity at [www.udacity.com](https://www.udacity.com/) and users listed at the CODEOWNERS file.
+All software included in this repository is licensed under MIT license terms. All additional programs and libraries have their owners and are distributed under their respective licenses. This repository contains Udacity's intellectual property. For any inquires on its reuse or commercialization, please contact Udacity at [www.udacity.com](https://www.udacity.com/) and its CODEOWNERS.

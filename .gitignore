@@ -33,3 +33,8 @@
 
 pid
 CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+nbproject/
+Makefile
+cmakepatch.txt
