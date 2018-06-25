@@ -1,3 +1,0 @@
-/home/anton/Developer/Projects/pid-control/pid-control/CMakeFiles/rebuild_cache.dir
-/home/anton/Developer/Projects/pid-control/pid-control/CMakeFiles/pid.dir
-/home/anton/Developer/Projects/pid-control/pid-control/CMakeFiles/edit_cache.dir
