@@ -11,6 +11,7 @@ PID::PID() {}
 PID::~PID() {}
 
 void PID::Init(double Kp_, double Ki_, double Kd_) {
+	Kp = Ki = Kd = 0.0;
 	Kp = Kp_;
 	Ki = Ki_;
 	Kd = Kd_;
